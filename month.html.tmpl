@@ -195,6 +195,42 @@
                 <td>$month.inTemp.mintime</td>
               </tr>
               #end if
+              #if $month.officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$month.officeTemperature.max</td>
+                <td>$month.officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$month.officeTemperature.min</td>
+                <td>$month.officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $month.officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$month.officeDewpoint.max</td>
+                <td>$month.officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$month.officeDewpoint.min</td>
+                <td>$month.officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $month.officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$month.officeHumidity.max</td>
+                <td>$month.officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$month.officeHumidity.min</td>
+                <td>$month.officeHumidity.mintime</td>
+              </tr>
+              #end if
               #if $month.extraTemp1.has_data
               <tr>
                 <td>High Pond Temp</td>
@@ -353,6 +389,42 @@
                 <td>Low Inside Temperature</td>
                 <td>$month($months_ago=12).inTemp.min</td>
                 <td>$month($months_ago=12).inTemp.mintime</td>
+              </tr>
+              #end if
+              #if $month($months_ago=12).officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$month($months_ago=12).officeTemperature.max</td>
+                <td>$month($months_ago=12).officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$month($months_ago=12).officeTemperature.min</td>
+                <td>$month($months_ago=12).officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $month($months_ago=12).officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$month($months_ago=12).officeDewpoint.max</td>
+                <td>$month($months_ago=12).officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$month($months_ago=12).officeDewpoint.min</td>
+                <td>$month($months_ago=12).officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $month($months_ago=12).officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$month($months_ago=12).officeHumidity.max</td>
+                <td>$month($months_ago=12).officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$month($months_ago=12).officeHumidity.min</td>
+                <td>$month($months_ago=12).officeHumidity.mintime</td>
               </tr>
               #end if
               #if $month($months_ago=12).extraTemp1.has_data
@@ -587,9 +659,9 @@
             <img src="monthwindvec.png" alt="Wind Vector" />
             <img src="monthbarometer.png" alt="barometer"/>
             #if $month.inTemp.has_data
-            <img src="monthinside.png" alt="Inside" />
+            <img src="monthinside.png" alt="Inside/Office" />
             #end if
-            <img src="monthinhumid.png" alt="Inside/Outside Humidity" />
+            <img src="monthinhumid.png" alt="Inside/Office/Outside Humidity" />
             #if $month.UV.has_data
             <img src="monthuv.png" alt="UV Index" />
             #end if

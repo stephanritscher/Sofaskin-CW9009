@@ -195,6 +195,42 @@
                 <td>$week.inTemp.mintime</td>
               </tr>
               #end if
+              #if $week.officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$week.officeTemperature.max</td>
+                <td>$week.officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$week.officeTemperature.min</td>
+                <td>$week.officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $week.officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$week.officeDewpoint.max</td>
+                <td>$week.officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$week.officeDewpoint.min</td>
+                <td>$week.officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $week.officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$week.officeHumidity.max</td>
+                <td>$week.officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$week.officeHumidity.min</td>
+                <td>$week.officeHumidity.mintime</td>
+              </tr>
+              #end if
               #if $week.extraTemp1.has_data
               <tr>
                 <td>High Pond Temp</td>
@@ -350,6 +386,42 @@
                 <td>Low Inside Temperature</td>
                 <td>$yesterday.inTemp.min</td>
                 <td>$yesterday.inTemp.mintime</td>
+              </tr>
+              #end if
+              #if $yesterday.officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$yesterday.officeTemperature.max</td>
+                <td>$yesterday.officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$yesterday.officeTemperature.min</td>
+                <td>$yesterday.officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $yesterday.officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$yesterday.officeDewpoint.max</td>
+                <td>$yesterday.officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$yesterday.officeDewpoint.min</td>
+                <td>$yesterday.officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $yesterday.officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$yesterday.officeHumidity.max</td>
+                <td>$yesterday.officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$yesterday.officeHumidity.min</td>
+                <td>$yesterday.officeHumidity.mintime</td>
               </tr>
               #end if
               #if $yesterday.extraTemp1.has_data
@@ -512,6 +584,42 @@
                 <td>$month.inTemp.mintime</td>
               </tr>
               #end if
+              #if $month.officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$month.officeTemperature.max</td>
+                <td>$month.officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$month.officeTemperature.min</td>
+                <td>$month.officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $month.officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$month.officeDewpoint.max</td>
+                <td>$month.officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$month.officeDewpoint.min</td>
+                <td>$month.officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $month.officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$month.officeHumidity.max</td>
+                <td>$month.officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$month.officeHumidity.min</td>
+                <td>$month.officeHumidity.mintime</td>
+              </tr>
+              #end if
               #if $month.extraTemp1.has_data
               <tr>
                 <td>High Pond Temp</td>
@@ -582,9 +690,9 @@
             <img src="weekwindvec.png" alt="Wind Vector" />
             <img src="weekbarometer.png" alt="barometer"/>
             #if $week.inTemp.has_data
-            <img src="weekinside.png" alt="Inside" />
+            <img src="weekinside.png" alt="Inside/Office" />
             #end if
-            <img src="weekinhumid.png" alt="Inside/Outside Humidity" />
+            <img src="weekinhumid.png" alt="Inside/Office/Outside Humidity" />
             #if $week.UV.has_data
             <img src="weekuv.png" alt="UV index" />
             #end if

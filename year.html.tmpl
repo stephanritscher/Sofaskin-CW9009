@@ -185,6 +185,42 @@
                 <td>$year.inTemp.mintime</td>
               </tr>
               #end if
+              #if $year.officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$year.officeTemperature.max</td>
+                <td>$year.officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$year.officeTemperature.min</td>
+                <td>$year.officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $year.officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$year.officeDewpoint.max</td>
+                <td>$year.officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$year.officeDewpoint.min</td>
+                <td>$year.officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $year.officeDewpoint.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$year.officeHumidity.max</td>
+                <td>$year.officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$year.officeHumidity.min</td>
+                <td>$year.officeHumidity.mintime</td>
+              </tr>
+              #end if
               #if $year.extraTemp1.has_data
               <tr>
                 <td>High Pond Temp</td>
@@ -367,6 +403,42 @@
                 <td>$year($years_ago=1).inTemp.mintime</td>
               </tr>
               #end if
+              #if $year($years_ago=1).officeTemperature.has_data
+              <tr>
+                <td>High Office Temperature</td>
+                <td>$year($years_ago=1).officeTemperature.max</td>
+                <td>$year($years_ago=1).officeTemperature.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Temperature</td>
+                <td>$year($years_ago=1).officeTemperature.min</td>
+                <td>$year($years_ago=1).officeTemperature.mintime</td>
+              </tr>
+              #end if
+              #if $year($years_ago=1).officeDewpoint.has_data
+              <tr>
+                <td>High Office Dewpoint</td>
+                <td>$year($years_ago=1).officeDewpoint.max</td>
+                <td>$year($years_ago=1).officeDewpoint.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Dewpoint</td>
+                <td>$year($years_ago=1).officeDewpoint.min</td>
+                <td>$year($years_ago=1).officeDewpoint.mintime</td>
+              </tr>
+              #end if
+              #if $year($years_ago=1).officeHumidity.has_data
+              <tr>
+                <td>High Office Humidity</td>
+                <td>$year($years_ago=1).officeHumidity.max</td>
+                <td>$year($years_ago=1).officeHumidity.maxtime</td>
+              </tr>
+              <tr>
+                <td>Low Office Humidity</td>
+                <td>$year($years_ago=1).officeHumidity.min</td>
+                <td>$year($years_ago=1).officeHumidity.mintime</td>
+              </tr>
+              #end if
               #if $year($years_ago=1).extraTemp1.has_data
               <tr>
                 <td>High Pond Temp</td>
@@ -427,9 +499,9 @@
             <img src="yearwindvec.png" alt="Wind Vector" />
             <img src="yearbarometer.png" alt="barometer"/>
             #if $year.inTemp.has_data
-            <img src="yearinside.png" alt="Inside" />
-	          #end if
-            <img src="yearinhumid.png" alt="Inside/Outside Humidity" />
+            <img src="yearinside.png" alt="Inside/Office" />
+	    #end if
+            <img src="yearinhumid.png" alt="Inside/Office/Outside Humidity" />
             #if $year.UV.has_data
             <img src="yearuv.png" alt="UV Index" />
             #end if
